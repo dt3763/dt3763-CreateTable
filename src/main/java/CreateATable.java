@@ -3,7 +3,7 @@ import Util.ConnectionUtil;
 import Util.FileUtil;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -70,6 +70,7 @@ public class CreateATable {
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {
+            
             Connection connection = ConnectionUtil.getConnection();
             Statement s = connection.createStatement();
             s.executeUpdate(sql);

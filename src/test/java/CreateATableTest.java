@@ -3,7 +3,7 @@ import Util.ConnectionUtil;
 import org.junit.After;
 import org.junit.Test;
 
-import javax.xml.transform.Result;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -41,8 +41,20 @@ public class CreateATableTest {
             ps.executeUpdate();
         } catch (SQLException e) {
             System.out.println("problem1: " + e.getMessage() + '\n');
-            fail();
+            extracted3();
         }
+    }
+
+    private void extracted3() {
+        extracted2();
+    }
+
+    private void extracted2() {
+        extracted();
+    }
+
+    private void extracted() {
+        fail();
     }
 
 }
